@@ -1,0 +1,7 @@
+{
+  "name": "daily-tasks",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
