@@ -1,6 +1,6 @@
 {
   "appId": "io.ionic.starter",
-  "appName": "daily-tasks",
+  "appName": "Daily Tasks",
   "bundledWebRuntime": false,
   "npmClient": "npm",
   "webDir": "www",

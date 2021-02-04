@@ -1,17 +1,36 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 1
+      Weather
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+    <div class="background">
+        <div class="flex-container" fxLayout="row" fxLayout.xs="column" *ngIf="weatherData.main">
+            <div class="content">
+                <div class="header-title">
+                    Weather Report
+                </div>
+                <div class="location">
+                    {{weatherData.name + ', ' + weatherData.sys.country}}
+                </div>
+                <div class="weather">
+                    <div class="main-weather">
+                        {{weatherData.main.temp}}<sup>o</sup><span>C</span>  
+                    </div>
+                    <div class="weather-icon">
+                        <img src="http://openweathermap.org/img/wn/{{weatherData.weather[0].icon}}@2x.png" />
+                    </div>
+                    <div class="feels-like">
+                        It feels like {{weatherData.main.feels_like}} <sup>o</sup><span>C</span>
+                    </div>
+                    <div class="clouds">
+                        {{weatherData.clouds.all}}% Clouds
+                    </div>
+                </div>
+            </div>
+        </div>  
+    </div>
 </ion-content>

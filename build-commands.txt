@@ -1,0 +1,10 @@
+ionic serve
+ionic capacitor build android
+ionic cap add android
+ionic cap open android
+cd android && ./gradlew assembleDebug
+
+build location: android/app/build/outputs/apk/debug/app-debug.apk
+
+Server deployment:
+git push heroku main
